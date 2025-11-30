@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cu5f7rjtb1vyd"]
+
+[ext_resource type="SpriteFrames" uid="uid://nrwndkh1rfsh" path="res://Assets/Characters/Velkan/velkan.tres" id="1_as45l"]
+
+[node name="Velkan" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_as45l")
+animation = &"death_up"
+frame = 14
+frame_progress = 1.0

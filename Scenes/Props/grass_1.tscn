@@ -1,0 +1,171 @@
+[gd_scene load_steps=38 format=3 uid="uid://d0wibtrdbjqrk"]
+
+[ext_resource type="Texture2D" uid="uid://b8x3hbq7dqatw" path="res://Assets/Tilesets/Fantasy tileset - 2D Isometric/Props/Flora A1_E.png" id="1_ggk1k"]
+[ext_resource type="Texture2D" uid="uid://damc54yn1rdhd" path="res://Assets/Tilesets/Fantasy tileset - 2D Isometric/Animations/Destructible tiles/Grass explosion small/0001.png" id="2_041rw"]
+[ext_resource type="Texture2D" uid="uid://drf4hayggken7" path="res://Assets/Tilesets/Fantasy tileset - 2D Isometric/Animations/Destructible tiles/Grass explosion small/0003.png" id="3_eh11o"]
+[ext_resource type="Texture2D" uid="uid://ykropvjp3c78" path="res://Assets/Tilesets/Fantasy tileset - 2D Isometric/Animations/Destructible tiles/Grass explosion small/0005.png" id="4_nsyuo"]
+[ext_resource type="Texture2D" uid="uid://6v8a77a5n62x" path="res://Assets/Tilesets/Fantasy tileset - 2D Isometric/Animations/Destructible tiles/Grass explosion small/0007.png" id="5_jxgsw"]
+[ext_resource type="Texture2D" uid="uid://chg84raovjrn" path="res://Assets/Tilesets/Fantasy tileset - 2D Isometric/Animations/Destructible tiles/Grass explosion small/0009.png" id="6_sf4t3"]
+[ext_resource type="Texture2D" uid="uid://nwsr0fqxl2si" path="res://Assets/Tilesets/Fantasy tileset - 2D Isometric/Animations/Destructible tiles/Grass explosion small/0011.png" id="7_5mg7e"]
+[ext_resource type="Texture2D" uid="uid://dpgve1i8juls5" path="res://Assets/Tilesets/Fantasy tileset - 2D Isometric/Animations/Destructible tiles/Grass explosion small/0013.png" id="8_2txvy"]
+[ext_resource type="Texture2D" uid="uid://d4mug84bwueek" path="res://Assets/Tilesets/Fantasy tileset - 2D Isometric/Animations/Destructible tiles/Grass explosion small/0015.png" id="9_t8ofk"]
+[ext_resource type="Texture2D" uid="uid://cu7vs5pyuevq1" path="res://Assets/Tilesets/Fantasy tileset - 2D Isometric/Animations/Destructible tiles/Grass explosion small/0017.png" id="10_p1spl"]
+[ext_resource type="Texture2D" uid="uid://ccnxde64owo83" path="res://Assets/Tilesets/Fantasy tileset - 2D Isometric/Animations/Destructible tiles/Grass explosion small/0019.png" id="11_ty8nj"]
+[ext_resource type="Texture2D" uid="uid://c7w56ly74f0va" path="res://Assets/Tilesets/Fantasy tileset - 2D Isometric/Animations/Destructible tiles/Grass explosion small/0021.png" id="12_omob5"]
+[ext_resource type="Texture2D" uid="uid://dabw27ok8rmxf" path="res://Assets/Tilesets/Fantasy tileset - 2D Isometric/Animations/Destructible tiles/Grass explosion small/0023.png" id="13_jve5g"]
+[ext_resource type="Texture2D" uid="uid://cekte10mu08ey" path="res://Assets/Tilesets/Fantasy tileset - 2D Isometric/Animations/Destructible tiles/Grass explosion small/0025.png" id="14_ivxll"]
+[ext_resource type="Texture2D" uid="uid://btk61bteohcnu" path="res://Assets/Tilesets/Fantasy tileset - 2D Isometric/Animations/Destructible tiles/Grass explosion small/0027.png" id="15_3scmu"]
+[ext_resource type="Texture2D" uid="uid://14i1xbg1ci4m" path="res://Assets/Tilesets/Fantasy tileset - 2D Isometric/Animations/Destructible tiles/Grass explosion small/0029.png" id="16_37v30"]
+[ext_resource type="Texture2D" uid="uid://upc1rfagpwv6" path="res://Assets/Tilesets/Fantasy tileset - 2D Isometric/Animations/Destructible tiles/Grass explosion small/0031.png" id="17_x2clv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_no55e"]
+atlas = ExtResource("1_ggk1k")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bp3o2"]
+atlas = ExtResource("2_041rw")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rxavl"]
+atlas = ExtResource("3_eh11o")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s4282"]
+atlas = ExtResource("4_nsyuo")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w2lgi"]
+atlas = ExtResource("5_jxgsw")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0635"]
+atlas = ExtResource("6_sf4t3")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_voxci"]
+atlas = ExtResource("7_5mg7e")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wooqe"]
+atlas = ExtResource("8_2txvy")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aad1w"]
+atlas = ExtResource("9_t8ofk")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3px7"]
+atlas = ExtResource("10_p1spl")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ivs60"]
+atlas = ExtResource("11_ty8nj")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0fj5t"]
+atlas = ExtResource("12_omob5")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o15bl"]
+atlas = ExtResource("13_jve5g")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ssl71"]
+atlas = ExtResource("14_ivxll")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q1i25"]
+atlas = ExtResource("14_ivxll")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xitho"]
+atlas = ExtResource("14_ivxll")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5xx4r"]
+atlas = ExtResource("15_3scmu")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7pjc4"]
+atlas = ExtResource("16_37v30")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_45ub0"]
+atlas = ExtResource("17_x2clv")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y6lfg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_no55e")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bp3o2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rxavl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s4282")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w2lgi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d0635")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_voxci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wooqe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aad1w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n3px7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ivs60")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0fj5t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o15bl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ssl71")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q1i25")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xitho")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5xx4r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7pjc4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_45ub0")
+}],
+"loop": true,
+"name": &"destroy",
+"speed": 20.0
+}]
+
+[node name="Grass1" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_y6lfg")
+frame_progress = 0.7031819

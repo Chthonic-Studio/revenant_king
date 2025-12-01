@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ck3hnlf5kqn36"
+path="res://.godot/imported/FIGHT_BODY_HITS_FOLEY_SFX (9).wav-02b7d61998ccf17c6cb501281cbd9d36.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/SFX/Body_Hits/FIGHT_BODY_HITS_FOLEY_SFX (9).wav"
+dest_files=["res://.godot/imported/FIGHT_BODY_HITS_FOLEY_SFX (9).wav-02b7d61998ccf17c6cb501281cbd9d36.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

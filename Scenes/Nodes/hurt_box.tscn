@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://b6274i83cctvr" path="res://Scripts/GeneralNodes/hurtbox.gd" id="1_l1kxp"]
 
 [node name="HurtBox" type="Area2D"]
-collision_layer = 0
-collision_mask = 2
+collision_layer = 2
+collision_mask = 0
 monitoring = false
 script = ExtResource("1_l1kxp")

@@ -5,6 +5,7 @@ signal direction_changed ( new_direction : Vector2 )
 @onready var sprite : AnimatedSprite2D = $AnimatedSprite2D
 @onready var state_machine : PlayerStateMachine = $StateMachine
 
+const DIR_4 = [ Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP ]
 var direction : Vector2 = Vector2.ZERO 
 var cardinal_direction : Vector2 = Vector2.DOWN
 
@@ -27,15 +28,15 @@ func _physics_process(delta):
 	move_and_slide()
 
 func set_direction() -> bool:
-	var new_dir : Vector2 = cardinal_direction
 	if direction == Vector2.ZERO:
 		return false
 	
-	if direction.y == 0:
-		new_dir = Vector2.LEFT if direction.x < 0 else Vector2.RIGHT 
-	elif direction.x == 0:
-		new_dir = Vector2.UP if direction.y < 0 else Vector2.DOWN 
+	var direction_id : int = int( round ( ( cardinal_direction ).angle() / TAU * DIR_4.size() ) )
+	var new_dir = DIR_4[ direction_id ]
 	
+	if new_dir == cardinal_direction:
+		return false 
+		
 	cardinal_direction = new_dir
 	
 	direction_changed.emit(new_dir)

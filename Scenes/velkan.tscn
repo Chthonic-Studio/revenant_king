@@ -57,6 +57,7 @@ slash_sound = ExtResource("7_i2rr5")
 script = ExtResource("8_obept")
 
 [node name="HurtBox" parent="Interactions" instance=ExtResource("8_pjhwe")]
+position = Vector2(0, -11)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactions/HurtBox"]
 position = Vector2(0, 11)
@@ -64,6 +65,8 @@ shape = SubResource("CircleShape2D_obept")
 debug_color = Color(0.9932367, 0.3837202, 0.41367215, 0.41960785)
 
 [node name="HitBox" parent="Interactions" instance=ExtResource("9_qn0nv")]
+collision_layer = 0
+collision_mask = 256
 monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactions/HitBox"]

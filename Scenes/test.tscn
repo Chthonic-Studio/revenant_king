@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=4 uid="uid://cxkiie5ad3g8j"]
+[gd_scene load_steps=4 format=4 uid="uid://cxkiie5ad3g8j"]
 
 [ext_resource type="TileSet" uid="uid://bo1g0wmtnyhos" path="res://Assets/Tilesets/Fantasy tileset - 2D Isometric/general_fantasy_tileset.tres" id="1_lc1oi"]
 [ext_resource type="PackedScene" uid="uid://cu5f7rjtb1vyd" path="res://Scenes/velkan.tscn" id="2_8od7v"]
+[ext_resource type="PackedScene" uid="uid://d0wibtrdbjqrk" path="res://Scenes/Props/grass_1.tscn" id="2_qc4db"]
 
 [node name="Test" type="Node2D"]
+y_sort_enabled = true
 
 [node name="Tilemaps" type="Node2D" parent="."]
 
@@ -16,6 +18,21 @@ tile_map_data = PackedByteArray("AAAAAAQABAAdABsAAAAAAAUABAAdABwAAAAAAAYABAAdAB0
 tile_set = ExtResource("1_lc1oi")
 
 [node name="Props" type="Node2D" parent="."]
+
+[node name="Grass1" parent="Props" instance=ExtResource("2_qc4db")]
+position = Vector2(153, 202)
+
+[node name="Grass2" parent="Props" instance=ExtResource("2_qc4db")]
+position = Vector2(161, 16)
+
+[node name="Grass3" parent="Props" instance=ExtResource("2_qc4db")]
+position = Vector2(16, 308)
+
+[node name="Grass4" parent="Props" instance=ExtResource("2_qc4db")]
+position = Vector2(456, 86)
+
+[node name="Grass5" parent="Props" instance=ExtResource("2_qc4db")]
+position = Vector2(537, 309)
 
 [node name="Velkan" parent="." instance=ExtResource("2_8od7v")]
 position = Vector2(262, 147)

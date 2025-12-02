@@ -1,5 +1,6 @@
-[gd_scene load_steps=38 format=3 uid="uid://d0wibtrdbjqrk"]
+[gd_scene load_steps=41 format=3 uid="uid://d0wibtrdbjqrk"]
 
+[ext_resource type="Script" uid="uid://b3xjr8opg6xry" path="res://Scripts/GeneralNodes/Props/grass.gd" id="1_eh11o"]
 [ext_resource type="Texture2D" uid="uid://b8x3hbq7dqatw" path="res://Assets/Tilesets/Fantasy tileset - 2D Isometric/Props/Flora A1_E.png" id="1_ggk1k"]
 [ext_resource type="Texture2D" uid="uid://damc54yn1rdhd" path="res://Assets/Tilesets/Fantasy tileset - 2D Isometric/Animations/Destructible tiles/Grass explosion small/0001.png" id="2_041rw"]
 [ext_resource type="Texture2D" uid="uid://drf4hayggken7" path="res://Assets/Tilesets/Fantasy tileset - 2D Isometric/Animations/Destructible tiles/Grass explosion small/0003.png" id="3_eh11o"]
@@ -17,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://btk61bteohcnu" path="res://Assets/Tilesets/Fantasy tileset - 2D Isometric/Animations/Destructible tiles/Grass explosion small/0027.png" id="15_3scmu"]
 [ext_resource type="Texture2D" uid="uid://14i1xbg1ci4m" path="res://Assets/Tilesets/Fantasy tileset - 2D Isometric/Animations/Destructible tiles/Grass explosion small/0029.png" id="16_37v30"]
 [ext_resource type="Texture2D" uid="uid://upc1rfagpwv6" path="res://Assets/Tilesets/Fantasy tileset - 2D Isometric/Animations/Destructible tiles/Grass explosion small/0031.png" id="17_x2clv"]
+[ext_resource type="PackedScene" uid="uid://78hjr4hexsm3" path="res://Scenes/Nodes/hurt_box.tscn" id="18_041rw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_no55e"]
 atlas = ExtResource("1_ggk1k")
@@ -164,8 +166,22 @@ animations = [{
 "speed": 20.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nsyuo"]
+size = Vector2(54, 28)
+
 [node name="Grass1" type="Node2D"]
+script = ExtResource("1_eh11o")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -79)
 sprite_frames = SubResource("SpriteFrames_y6lfg")
 frame_progress = 0.7031819
+
+[node name="HurtBox" parent="." instance=ExtResource("18_041rw")]
+position = Vector2(0, -5)
+collision_layer = 256
+collision_mask = 0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(1, 7)
+shape = SubResource("RectangleShape2D_nsyuo")

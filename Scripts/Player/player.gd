@@ -1,5 +1,7 @@
 class_name Player extends CharacterBody2D
 
+signal direction_changed ( new_direction : Vector2 )
+
 @onready var sprite : AnimatedSprite2D = $AnimatedSprite2D
 @onready var state_machine : PlayerStateMachine = $StateMachine
 
@@ -35,6 +37,8 @@ func set_direction() -> bool:
 		new_dir = Vector2.UP if direction.y < 0 else Vector2.DOWN 
 	
 	cardinal_direction = new_dir
+	
+	direction_changed.emit(new_dir)
 	
 	return true
 	

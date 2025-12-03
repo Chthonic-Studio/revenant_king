@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cu5f7rjtb1vyd"]
+[gd_scene load_steps=15 format=3 uid="uid://cu5f7rjtb1vyd"]
 
 [ext_resource type="Script" uid="uid://dxys0id4mhj4b" path="res://Scripts/Player/player.gd" id="1_1qnru"]
 [ext_resource type="SpriteFrames" uid="uid://nrwndkh1rfsh" path="res://Assets/Characters/Velkan/velkan.tres" id="1_as45l"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://clf4j6d2y07hg" path="res://Scripts/Player/FSM/state_walk.gd" id="5_bqsrl"]
 [ext_resource type="Script" uid="uid://cemkhhd5uuny1" path="res://Scripts/Player/FSM/state_attack.gd" id="6_bqsrl"]
 [ext_resource type="AudioStream" uid="uid://xd48sfppjdjk" path="res://Assets/Audio/SFX/Sword/sword_slash_2.wav" id="7_i2rr5"]
+[ext_resource type="Script" uid="uid://b7kqwc5wiit2x" path="res://Scripts/Player/player_camera.gd" id="8_d3t2b"]
 [ext_resource type="Script" uid="uid://drbkk24rygwyp" path="res://Scripts/GeneralNodes/interactions.gd" id="8_obept"]
 [ext_resource type="PackedScene" uid="uid://78hjr4hexsm3" path="res://Scenes/Nodes/hurt_box.tscn" id="8_pjhwe"]
 [ext_resource type="PackedScene" uid="uid://cqob2y2f7ge2r" path="res://Scenes/Nodes/hit_box.tscn" id="9_qn0nv"]
@@ -18,8 +19,8 @@ height = 34.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_obept"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d3t2b"]
-radius = 18.013563
-height = 57.99858
+radius = 29.999264
+height = 61.99848
 
 [node name="Velkan" type="CharacterBody2D"]
 collision_mask = 16
@@ -48,6 +49,7 @@ script = ExtResource("6_bqsrl")
 slash_sound = ExtResource("7_i2rr5")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("8_d3t2b")
 
 [node name="Audio" type="Node2D" parent="."]
 
@@ -65,7 +67,6 @@ shape = SubResource("CircleShape2D_obept")
 debug_color = Color(0.9932367, 0.3837202, 0.41367215, 0.41960785)
 
 [node name="HitBox" parent="Interactions" instance=ExtResource("9_qn0nv")]
-collision_layer = 0
 collision_mask = 256
 monitoring = false
 

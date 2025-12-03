@@ -10,10 +10,10 @@ func _ready() -> void:
 func get_tilemap_bounds() -> Array[Vector2]:
 	var bounds : Array [Vector2] = []
 	bounds.append(
-		Vector2( get_used_rect().position * rendering_quadrant_size )
+		Vector2( get_used_rect().position * tile_set.tile_size )
 	)
 	bounds.append(
-		Vector2( get_used_cells().end * rendering_quadrant_size )
+		Vector2( get_used_rect().end * tile_set.tile_size )
 	)
 	return bounds
 	

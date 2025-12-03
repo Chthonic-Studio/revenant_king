@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cu5f7rjtb1vyd"]
+[gd_scene load_steps=15 format=3 uid="uid://cu5f7rjtb1vyd"]
 
 [ext_resource type="Script" uid="uid://dxys0id4mhj4b" path="res://Scripts/Player/player.gd" id="1_1qnru"]
 [ext_resource type="SpriteFrames" uid="uid://nrwndkh1rfsh" path="res://Assets/Characters/Velkan/velkan.tres" id="1_as45l"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://drbkk24rygwyp" path="res://Scripts/GeneralNodes/interactions.gd" id="8_obept"]
 [ext_resource type="PackedScene" uid="uid://78hjr4hexsm3" path="res://Scenes/Nodes/hurt_box.tscn" id="8_pjhwe"]
 [ext_resource type="PackedScene" uid="uid://cqob2y2f7ge2r" path="res://Scenes/Nodes/hit_box.tscn" id="9_qn0nv"]
+[ext_resource type="Script" uid="uid://b7kqwc5wiit2x" path="res://Scripts/Player/player_camera.gd" id="10_camera"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_as45l"]
 radius = 7.0
@@ -48,6 +49,7 @@ script = ExtResource("6_bqsrl")
 slash_sound = ExtResource("7_i2rr5")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("10_camera")
 
 [node name="Audio" type="Node2D" parent="."]
 

@@ -23,7 +23,7 @@ script = ExtResource("1_ys1qc")
 [node name="Props" type="Node2D" parent="."]
 
 [node name="Grass1" parent="Props" instance=ExtResource("2_qc4db")]
-position = Vector2(153, 202)
+position = Vector2(147, 192)
 
 [node name="Grass2" parent="Props" instance=ExtResource("2_qc4db")]
 position = Vector2(161, 16)

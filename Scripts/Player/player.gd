@@ -23,9 +23,13 @@ func _process(delta: float) -> void:
 		Input.get_axis("up", "down")
 	).normalized()
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	
 	move_and_slide()
+	
+	if not LevelManager.current_tilemap_bounds.is_empty():
+		global_position.x = clampf(global_position.x, LevelManager.current_tilemap_bounds[0].x, LevelManager.current_tilemap_bounds[1].x)
+		global_position.y = clampf(global_position.y, LevelManager.current_tilemap_bounds[0].y, LevelManager.current_tilemap_bounds[1].y)
 
 func set_direction() -> bool:
 	if direction == Vector2.ZERO:

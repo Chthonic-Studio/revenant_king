@@ -49,6 +49,11 @@ script = ExtResource("6_bqsrl")
 slash_sound = ExtResource("7_i2rr5")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 15.0
+rotation_smoothing_enabled = true
+editor_draw_limits = true
 script = ExtResource("8_d3t2b")
 
 [node name="Audio" type="Node2D" parent="."]

@@ -1,0 +1,61 @@
+[gd_scene load_steps=11 format=3 uid="uid://c8lk41rbcxaqm"]
+
+[ext_resource type="SpriteFrames" uid="uid://crv7cvkwlqgr0" path="res://Assets/Characters/Enemies/Knight_20251129_193351/knight1_test.tres" id="1_1ovyo"]
+[ext_resource type="Script" uid="uid://chmiftpxktr72" path="res://Scripts/Enemies/enemy.gd" id="1_ob1ap"]
+[ext_resource type="PackedScene" uid="uid://78hjr4hexsm3" path="res://Scenes/Nodes/hurt_box.tscn" id="3_wvb0u"]
+[ext_resource type="PackedScene" uid="uid://cqob2y2f7ge2r" path="res://Scenes/Nodes/hit_box.tscn" id="4_yoe6u"]
+[ext_resource type="Script" uid="uid://dau557bw6rggg" path="res://Scripts/Enemies/enemy_state_machine.gd" id="5_wvb0u"]
+[ext_resource type="Script" uid="uid://d37edhg1bl53t" path="res://Scripts/Enemies/States/enemy_state_idle.gd" id="6_yoe6u"]
+[ext_resource type="Script" uid="uid://cg78v0lyyrs4n" path="res://Scripts/Enemies/States/enemy_state_wander.gd" id="7_ob1ap"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ob1ap"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_loqbk"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bx7x8"]
+radius = 29.999264
+height = 61.99848
+
+[node name="Knight1Test" type="CharacterBody2D"]
+collision_layer = 256
+collision_mask = 16
+script = ExtResource("1_ob1ap")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 9)
+shape = SubResource("CapsuleShape2D_ob1ap")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_1ovyo")
+animation = &"slash_up"
+frame = 14
+frame_progress = 1.0
+
+[node name="EnemyStateMachine" type="Node" parent="."]
+script = ExtResource("5_wvb0u")
+metadata/_custom_type_script = "uid://dau557bw6rggg"
+
+[node name="Idle" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("after_idle_state")]
+script = ExtResource("6_yoe6u")
+after_idle_state = NodePath("../Wander")
+
+[node name="Wander" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("next_state")]
+script = ExtResource("7_ob1ap")
+next_state = NodePath("../Idle")
+
+[node name="HurtBox" parent="." instance=ExtResource("3_wvb0u")]
+position = Vector2(0, -11)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(0, 11)
+shape = SubResource("CircleShape2D_loqbk")
+debug_color = Color(0.9932367, 0.3837202, 0.41367215, 0.41960785)
+
+[node name="HitBox" parent="." instance=ExtResource("4_yoe6u")]
+collision_mask = 256
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(0, 23.000002)
+rotation = 1.5637946
+shape = SubResource("CapsuleShape2D_bx7x8")

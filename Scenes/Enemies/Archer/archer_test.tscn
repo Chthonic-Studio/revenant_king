@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://6rfhli1602le"]
+
+[ext_resource type="SpriteFrames" uid="uid://pob0qlajetr2" path="res://Assets/Characters/Enemies/Archer_20251129_194754/archer_test.tres" id="1_v1kjj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gld6k"]
+radius = 11.0
+
+[node name="ArcherTest" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_v1kjj")
+animation = &"walk_up"
+frame_progress = 0.43854824
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 11)
+shape = SubResource("CircleShape2D_gld6k")

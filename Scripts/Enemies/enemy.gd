@@ -1,36 +1,36 @@
-class_name Player extends CharacterBody2D
+class_name Enemy extends CharacterBody2D
 
-signal direction_changed ( new_direction : Vector2 )
+signal direction_changed ( new_direction: Vector2 )
+signal enemy_damaged ( )
 
 @onready var sprite : AnimatedSprite2D = $AnimatedSprite2D
-@onready var state_machine : PlayerStateMachine = $StateMachine
+#@onready var hit_box : HitBox = $Interactions/HitBox
+#@onready var hurt_box : HurtBox = $Interactions/HurtBox
+@onready var state_machine : EnemyStateMachine = $EnemyStateMachine
 
 const DIR_4 = [ Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP ]
+
+@export var hp: int = 5
+
 var direction : Vector2 = Vector2.ZERO 
 var cardinal_direction : Vector2 = Vector2.DOWN
+var player : Player
+var invulnerable : bool = false
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	PlayerManager.player = self
 	state_machine.initialize(self)
+	player = PlayerManager.player
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	
-	direction = Vector2(
-		Input.get_axis("left", "right"),
-		Input.get_axis("up", "down")
-	).normalized()
+	pass
 
-func _physics_process(_delta):
-	
+func _physics_process(_delta: float) -> void:
 	move_and_slide()
 	
-	if not LevelManager.current_tilemap_bounds.is_empty():
-		global_position.x = clampf(global_position.x, LevelManager.current_tilemap_bounds[0].x, LevelManager.current_tilemap_bounds[1].x)
-		global_position.y = clampf(global_position.y, LevelManager.current_tilemap_bounds[0].y, LevelManager.current_tilemap_bounds[1].y)
-
-func set_direction() -> bool:
+func set_direction( _new_direction : Vector2 ) -> bool:
+	direction == _new_direction
 	if direction == Vector2.ZERO:
 		return false
 	
@@ -41,11 +41,10 @@ func set_direction() -> bool:
 		return false 
 		
 	cardinal_direction = new_dir
-	
 	direction_changed.emit(new_dir)
 	
 	return true
-	
+
 func update_animation( state : String) -> void:
 	sprite.play(state + "_" + anim_direction())
 	pass
@@ -62,4 +61,3 @@ func anim_direction() -> String:
 	else:
 		print("Unrecognized Animation Direction for Player")
 		return "down"
-	

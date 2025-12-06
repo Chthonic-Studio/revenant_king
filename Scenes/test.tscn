@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=4 uid="uid://cxkiie5ad3g8j"]
+[gd_scene load_steps=6 format=4 uid="uid://cxkiie5ad3g8j"]
 
 [ext_resource type="TileSet" uid="uid://bo1g0wmtnyhos" path="res://Assets/Tilesets/Fantasy tileset - 2D Isometric/general_fantasy_tileset.tres" id="1_lc1oi"]
 [ext_resource type="Script" uid="uid://cox6x5wx8id5q" path="res://Scripts/GeneralNodes/level_tilemap.gd" id="1_ys1qc"]
 [ext_resource type="PackedScene" uid="uid://cu5f7rjtb1vyd" path="res://Scenes/velkan.tscn" id="2_8od7v"]
 [ext_resource type="PackedScene" uid="uid://d0wibtrdbjqrk" path="res://Scenes/Props/grass_1.tscn" id="2_qc4db"]
+[ext_resource type="PackedScene" uid="uid://c8lk41rbcxaqm" path="res://Scenes/Enemies/Knight/knight1_test.tscn" id="5_35xla"]
 
 [node name="Test" type="Node2D"]
 y_sort_enabled = true
@@ -43,3 +44,11 @@ position = Vector2(537, 309)
 
 [node name="Velkan" parent="." instance=ExtResource("2_8od7v")]
 position = Vector2(263, 104)
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Knight1Test" parent="Enemies" instance=ExtResource("5_35xla")]
+position = Vector2(453, 232)
+
+[node name="Knight1Test2" parent="Enemies" instance=ExtResource("5_35xla")]
+position = Vector2(399, 68)

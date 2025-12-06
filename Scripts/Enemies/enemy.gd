@@ -30,7 +30,7 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 	
 func set_direction( _new_direction : Vector2 ) -> bool:
-	direction == _new_direction
+	direction = _new_direction
 	if direction == Vector2.ZERO:
 		return false
 	
